@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NAME: KwadwoAddaiPoku, ID:221it01000474 -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CBE7F4"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+
+        <!-- Application Name -->
+        <TextView
+            android:id="@+id/textAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VVU HOSPITAL"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="Logo"/>
+
+
+
+        <!-- Details Section -->
+        <TextView
+            android:id="@+id/textDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name of the Patient"
+            android:layout_below="@id/textDetails"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/editAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address of the Patient"
+            android:layout_below="@id/editName"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Age of the Patient"
+            android:layout_below="@id/editAddress"
+            android:layout_marginTop="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editAge"
+            android:layout_marginTop="8dp">
+
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Your Email Address"
+                android:inputType="textEmailAddress" />
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+
+        </RadioGroup>
+
+        <!-- Services Section -->
+        <TextView
+            android:id="@+id/textServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Services"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/radioGender"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Number of days spent in the hospital"
+            android:layout_below="@id/textServices"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/editMedication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Amount of medication charges"
+            android:layout_below="@id/editDays"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/editSurgical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Amount of surgical charges"
+            android:layout_below="@id/editMedication"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/editLab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Amount of lab fees"
+            android:layout_below="@id/editSurgical"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/editRehab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Amount of physical rehabilitation charges"
+            android:layout_below="@id/editLab"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Outputs Section -->
+        <TextView
+            android:id="@+id/textSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/editRehab"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/viewReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textSummary"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Operations Section -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:onClick="calculateTotal"
+            android:layout_below="@id/viewReport"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:onClick="clearAll"
+            android:layout_below="@id/btnCalculate"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:onClick="sendReceipt"
+            android:layout_below="@id/btnClear"
+            android:layout_marginTop="8dp"/>
+
+
+
+    </RelativeLayout>
+</ScrollView>
