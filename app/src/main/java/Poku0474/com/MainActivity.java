@@ -1,4 +1,4 @@
-/*Author: Kwadwo Addai Poku,ID Number: 221987*/
+/*Author: Kwadwo Addai Poku,ID Number: 221it01000474*/
 package Poku0474.com;
 
 import android.content.Intent;
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
             }
             }
         else {
-            // This displays a log message if the user doesnt input any email address
+            // This displays a log message if the user doent input any email address
             Log.e("MainActivity", "User email is empty. Cannot send receipt.");
             return;
 
